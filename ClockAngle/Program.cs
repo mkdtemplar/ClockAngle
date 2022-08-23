@@ -30,11 +30,11 @@ class ClockAngle
         }
 
        
-        double hour_angle = (0.5 * (h * 60 + m));
+        double hourAngle = (0.5 * (h * 60 + m));
 
-        double minute_angle = (6 * m);
+        double minuteAngle = 6 * m;
 
-        double angle = Math.Abs(hour_angle - minute_angle);
+        double angle = Math.Abs(hourAngle - minuteAngle);
 
         angle = Math.Min(360 - angle, angle);
 
