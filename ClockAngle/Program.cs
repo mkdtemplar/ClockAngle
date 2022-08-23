@@ -4,17 +4,24 @@ class ClockAngle
     static double calculateAngle(int h, int m)
     {
         // validate the input
-        if (h < 0 || m < 0 ||
-            h > 12 || m > 60)
+        if (h < 0 || m < 0 || h > 12 || m > 60)
+        {
             Console.WriteLine("Wrong input");
+        }
+            
 
         if (h == 12)
+        {
             h = 0;
+        }
+            
 
         if (m == 60)
         {
             m = 0;
+
             h += 1;
+
             if (h > 12)
             {
                 h -= 12;
@@ -24,6 +31,7 @@ class ClockAngle
 
        
         double hour_angle = (0.5 * (h * 60 + m));
+
         double minute_angle = (6 * m);
 
         double angle = Math.Abs(hour_angle - minute_angle);
