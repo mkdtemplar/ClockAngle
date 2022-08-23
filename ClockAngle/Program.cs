@@ -43,14 +43,12 @@ class ClockAngle
 
     public static void Main()
     {
-       
-        int minute;
 
         Console.Write("Enter hour: ");
         int hours = Convert.ToInt32(Console.ReadLine());
 
         Console.Write("Enter minutes: ");
-        minute = Convert.ToInt32(Console.ReadLine());
+        int minute = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine(calculateAngle(hours, minute));
     }
