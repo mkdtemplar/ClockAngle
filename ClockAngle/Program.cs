@@ -1,7 +1,7 @@
 ﻿using System;
 class ClockAngle
 {
-    static int calculateAngle(double h, double m)
+    static double calculateAngle(int h, int m)
     {
         // validate the input
         if (h < 0 || m < 0 ||
@@ -23,10 +23,10 @@ class ClockAngle
         }
 
        
-        int hour_angle = (int)(0.5 * (h * 60 + m));
-        int minute_angle = (int)(6 * m);
+        double hour_angle = (0.5 * (h * 60 + m));
+        double minute_angle = (6 * m);
 
-        int angle = Math.Abs(hour_angle - minute_angle);
+        double angle = Math.Abs(hour_angle - minute_angle);
 
         angle = Math.Min(360 - angle, angle);
 
@@ -35,6 +35,15 @@ class ClockAngle
 
     public static void Main()
     {
-        Console.WriteLine(calculateAngle(8, 23));
+       
+        int minute;
+
+        Console.Write("Enter hour: ");
+        int hours = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter minutes: ");
+        minute = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(calculateAngle(hours, minute));
     }
 }
