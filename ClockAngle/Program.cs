@@ -46,15 +46,6 @@ internal static class Program
         
         bool intResultHour = int.TryParse(input, out hours);
 
-
-        while (intResultHour == false)
-        {
-            WriteLine("Input for hours is not in integer format!");
-            Write("Enter hour: ");
-            input = ReadLine() ?? throw new InvalidOperationException();
-            intResultHour = int.TryParse(input, out hours);
-        }
-
         while ((hours is < 0 or > 12) || intResultHour == false)
         {
             if (hours is < 0 or > 12)
@@ -76,14 +67,6 @@ internal static class Program
         input = ReadLine() ?? throw new InvalidOperationException();
 
         bool intResultMinute = int.TryParse(input, out minute);
-
-        while (intResultMinute == false)
-        {
-            WriteLine("Input for minutes is not in integer format");
-            Write("Enter minutes: ");
-            input = ReadLine() ?? throw new InvalidOperationException();
-            intResultMinute = int.TryParse(input, out minute);
-        }
 
         while ((minute is < 0 or > 60) || intResultMinute == false)
         {
