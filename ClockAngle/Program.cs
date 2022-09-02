@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace ClockAngle;
+﻿namespace ClockAngle;
 using static Console;
 
 internal static class Program
